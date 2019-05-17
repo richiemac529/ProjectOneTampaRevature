@@ -2,23 +2,23 @@ package com.example.dao;
 
 import java.util.List;
 
-import com.example.model.Expanses;
+import com.example.model.Expenses;
 
 
 public interface ExpDao {
 	
 	// CREATE 
-	public int submitExp(Expanses x);
+	public int submitExp(Expenses x);
 	
 	// READ 
-	public Expanses selectPetByName(String name);
-	public List<Expanses> selectAllPets();
+	public Expenses selectPetByName(String name);
+	public List<Expenses> selectAllPets();
 	
 	// UPDATE
-	public int updatePet(Expanses x);
+	public int updatePet(Expenses x);
 	
 	//DELETE
-	public int deletePet(Expanses x);
+	public int deletePet(Expenses x);
 }
 
 

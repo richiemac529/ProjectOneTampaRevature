@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.example.model.Expanses;
+import com.example.model.Expenses;
 
 public class ExpDaoImpl implements ExpDao{
 	
@@ -31,7 +31,7 @@ public class ExpDaoImpl implements ExpDao{
 	private static String password = "Thioye123";
 
 	@Override
-	public int submitExp(Expanses x) {
+	public int submitExp(Expenses x) {
 		try (Connection conn = DriverManager.getConnection(url, username, password)) {
 
 			PreparedStatement ps = conn.prepareStatement("INSERT INTO Employee VALUES(?,?,?)");
@@ -47,28 +47,40 @@ public class ExpDaoImpl implements ExpDao{
 	}
 
 	@Override
-	public Expanses selectPetByName(String name) {
+	public Expenses selectPetByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Expanses> selectAllPets() {
+	public List<Expenses> selectAllPets() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public int updatePet(Expanses x) {
+	public int updatePet(Expenses x) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int deletePet(Expanses x) {
+	public int deletePet(Expenses x) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+//	@Override
+//	public Expenses selectPetByName(String name) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public Expenses selectPetByName(String name) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 
 }

@@ -3,7 +3,7 @@ package com.example.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import com.example.dao.ExpDaoImpl;
-import com.example.model.Expanses;
+import com.example.model.Expenses;
 
 
 public class SubmitController {
@@ -17,14 +17,14 @@ public static String Submit(HttpServletRequest request) {
 		
 //		int amount = request.getParameter();
 		
-		Expanses expanse = new Expanses();
-		expanse.setAmount(amount);
-		expanse.setExtype(extype);
-		expanse.setComments(comments);
+		Expenses expense = new Expenses();
+		expense.setAmount(amount);
+		expense.setExtype(extype);
+		expense.setComments(comments);
 		
 		
 		ExpDaoImpl pdImpl = new ExpDaoImpl();
-		pdImpl.submitExp(expanse);
+		pdImpl.submitExp(expense);
 		
 		return "/html/EmployeeHome.html";
 		
